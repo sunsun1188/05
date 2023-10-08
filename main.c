@@ -5,17 +5,24 @@
 
 int main() {
 	
-	int sum=0;
-	int num,i;
+	int answer=81;
+	int num;
 	
-	printf("Input a number: ");
-	scanf("%d",&num);
-	
-	for (i=0; i<=num; i++) {
+	do {
 		
-		sum=sum+i;
+		printf("Guess a number: ");
+		scanf("%d",&num);
+		
+		if (num>answer) {
+			printf("High\n");
+		} 
+		else if (num<answer) {
+			printf("Low\n");
+		}
 	} 
-	printf("The result is %d",sum);
-		
+	while(num!=answer);
+	
+	printf("congratulation!\n");
+			
 	return 0;
 }
