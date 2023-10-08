@@ -3,17 +3,19 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
+int main() {
 
-	int num;
+	char c;
+	int num=0;
 	
-	printf("정수 하나를 입력하시오: ");
-	scanf("%d", &num);
+	while ( (c=getchar())!='\n') {
+		
+		if (c>='0'&&c<='9') {
+			num++;
+		}
+	}
 	
-	if (num<0)
-		printf("절댓값은 %d", -num);
-	else
-		printf("절댓값은 %d", num);
-	
+	printf("숫자 문자  개수: %d\n",num);
+		
 	return 0;
 }
